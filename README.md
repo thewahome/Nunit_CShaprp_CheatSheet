@@ -1,4 +1,4 @@
-# Nunit_CShaprp_CheatSheet
+# Nunit_CShaprp_CheatSheet sample with travis
 This Project aims to provide a quick working code reference guide C# Nunit Automation testing projects.
 
 It has collection of most important attributes and assertions in Nunit along with comments on usage and best practices.
