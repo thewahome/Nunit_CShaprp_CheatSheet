@@ -7,9 +7,9 @@ script:
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore Summit.sln
+  - nuget restore Nunit_CShaprp_CheatSheet.sln
 after_script:
-  - nunit-console SummitTests/bin/Debug/SummitTests.dll
+  - nunit-console Nunit_CShaprp_CheatSheet/bin/Debug/Nunit_CShaprp_CheatSheet.dll
 notifications:
   webhooks:
     urls:
