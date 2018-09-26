@@ -1,0 +1,21 @@
+language: csharp
+install:
+  - nuget restore Nunit_CShaprp_CheatSheet.sln
+  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+script:
+  - msbuild Summit.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Summit.sln
+after_script:
+  - nunit-console SummitTests/bin/Debug/SummitTests.dll
+notifications:
+  webhooks:
+    urls:
+      - https://requestbin.fullcontact.com/13sz1px1
+    on_success: change # default: always
+    on_failure: always # default: always
+    on_start: change   # default: never
+    on_cancel: always # default: always
+    on_error: always # default: always
