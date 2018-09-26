@@ -3,7 +3,7 @@ install:
   - nuget restore Nunit_CShaprp_CheatSheet.sln
   - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
-  - msbuild Summit.sln
+  - msbuild Nunit_CShaprp_CheatSheet.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
